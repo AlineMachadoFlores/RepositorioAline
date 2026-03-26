@@ -317,6 +317,20 @@ print(f"O maior número é: {maior}")
 print(f"O menor número é: {menor}")
 
 
-
-
-
+#--------------------------EXERCÍCIO 15
+#[TUPLE] Dias da semana com tuplas
+#1 - Crie uma tupla com os dias da semana. dias = ()
+#2 - Utilize print() para exibis os dias da semana na tela. print(dias)
+#3 - Utilize o índice para exibir o primeiro dia da semana. Dica: dias [0]
+#4 - Utilize o índice para exibiri o último dia da lista.
+Dica? dias [-1]
+#5 - Verifique o tamanho da tupla utilizando len(dias).
+dias = ("Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado", "Domingo")
+#2
+print(dias)     
+#3
+print(dias[0])
+#4
+print(dias[-1])
+#5
+print(len(dias))    
