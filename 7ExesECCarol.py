@@ -8,6 +8,8 @@
 #4. Solicite ao usuário que informe um número e depois exiba se é par ou ímpar.
 #5. Solicite ao usuário que informe dois números e depois exiba qual número é maior ou se são iguais.
 #6. Faça uma calculadora simples contendo as operações: soma, subtração, divisão e multiplicação. Solicite ao usuário que informe dois número e que informe também a operação que deseja realizar (+, -, /, *) e depois exiba o resultado.
+
+#Exercício 1
 numero = float(input("Informe um número: "))    
 if numero > 0:
     print("O número é positivo.")
@@ -15,8 +17,17 @@ elif numero < 0:
     print("O número é negativo.")
 else:
     print("O número é zero.")
-
 print()
+
+#Exercício 2
+idade = int(input("Informe sua idade: "))
+if idade >= 18:
+    print("Você é maior de idade.")
+else:
+    print("Você é menor de idade.")
+print()
+
+#Exercício 3
 idade = int(input("Informe sua idade: "))
 if idade <=11:
     print("Criança")
@@ -27,12 +38,17 @@ elif idade > 17 and idade <=59:
 else:
     print("Idoso")
 print()
+
+#Exercício 4
 numero2 = int(input("Informe outro número: "))
 if numero2 % 2 == 0:
     print("O número é par.")
 else:
     print("O número é ímpar.")  
 print()
+
+
+#Exercício 5
 numero3 = float(input("Informe um número: "))
 numero4 = float(input("Informe outro número: "))
 if numero3 > numero4:
@@ -42,6 +58,8 @@ elif numero4 > numero3:
 else:
     print(f"Os números {numero3} e {numero4} são iguais.")
 print()
+
+#Exercício 6
 operacao = input("Informe a operação que deseja realizar (+, -, /, *): ")
 numero5 = float(input("Informe um número: "))
 numero6 = float(input("Informe outro número: "))
@@ -55,8 +73,6 @@ elif operacao == "*":
     resultado = numero5 * numero6
     print(f"O resultado da multiplicação é: {resultado}")
 elif operacao == "/":
-    if numero5 != 0:
         resultado = numero5 / numero6
         print(f"O resultado da divisão é: {resultado}")
-    else:
-        print("Erro: Divisão por zero não é permitida.")    
+else:    print("Operação inválida. Por favor, escolha entre +, -, / ou *.") 
