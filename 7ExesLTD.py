@@ -17,7 +17,7 @@ listadecompras.append("presunto")
 print("Lista de compras: ", listadecompras)
 listadecompras.remove("presunto")
 print("Lista de compras: ", listadecompras)
-
+print()
 
 #-----------------EXERCÍCIO 2
 # Remova um número se ele existir
@@ -29,6 +29,7 @@ print("Lista de compras: ", listadecompras)
 #Use: int(), input(), in, remove(), len(), print()
 #Tipos: int, list.
 #Conceitos: teste de pertencimento, tratamento simples de remoção, função len().
+
 n1 = int(input("Digite o primeiro número: "))
 n2 = int(input("Digite o segundo número: "))    
 n3 = int(input("Digite o terceiro número: "))
@@ -43,6 +44,7 @@ if remover in numeros:
 else:    print("Número não encontrado na lista.")
 print("Números na lista após remoção:", numeros)
 print("Tamanho da lista depois:", len(numeros))
+print()
 
 #-------------------------EXERCÍCIO 3
 #Atualizar elemento com uma operação
@@ -59,6 +61,7 @@ numeros = [num1, num2, num3]
 print("Lista original:", numeros)
 numeros[2] = numeros[0] + numeros[1]
 print("Lista atualizada:", numeros)
+print()
 
 
 #-------------------------EXERCÍCIO 4
@@ -83,6 +86,7 @@ notas.sort()
 print("A lista ordenada é: ", notas)
 nova_media = sum(notas) / len(notas)
 print("A nova média das notas é: ", nova_media)
+print()
 
 
 
@@ -105,6 +109,7 @@ print("Fila após adicionar cliente prioritário:", fila)
 cliente_atendido = fila.pop(0)
 print("Cliente atendido:", cliente_atendido)
 print("Fila após atendimento:", fila)
+print()
 
 
 
@@ -122,6 +127,7 @@ aluno = {"nome": nome, "idade": idade}
 #Exibição do dicionário e seu tipo
 print(aluno)  # Exibe o dicionário do aluno
 print(type(aluno))  # Exibe o tipo do dicionário
+print()
 
 #-------------------------EXERCÍCIO 7
 #CONTINUIDADE DO EXERCÍCIO ANTERIOR] 
@@ -134,7 +140,7 @@ aluno = {"nome": "João", "idade": 20}
 nota = float(input("Digite a nota do aluno: "))
 aluno["nota"] = nota
 print(aluno)
-
+print()
 
 #------------------------EXERCÍCIO 8
 #[DICT] Remover uma chave com segurança
@@ -151,7 +157,7 @@ produto = {"nome": nome, "preco": preco}
 print("Antes:", produto)
 produto.pop("desconto", None)
 print("Depois:", produto)
-
+print()
 
 #-------------------------EXERCÍCIO 9
 #[DICT - desafio] Atualizar preço e quantidade; calcular o total 
@@ -186,6 +192,7 @@ print(f"Produto: {produto['nome']}")
 print(f"Preço atualizado: {produto['preco']:.2f}")
 print(f"Quantidade atualizada: {produto['quantidade']}")
 print(f"Total: {total:.2f}")
+print()
 
 
 #--------------------------EXERCÍCIO 10
@@ -241,7 +248,7 @@ while True:
 
     else:
         print("Opção inválida. Por favor, tente novamente.")
-
+print()
 
 #--------------------EXERCÍCIO 11
 #[TUPLE] Criar e exibir uma tupla simples
@@ -262,6 +269,7 @@ tupla_nomes = (nome1, nome2)
 #Exibir a tupla e o tipo dela
 print("A tupla criada é:", tupla_nomes)
 print("O tipo da tupla é:", type(tupla_nomes))
+print()
 
 #----------------------EXERCÍCIO 12
 #[TUPLE] Acessar elementos da tupla
@@ -282,6 +290,7 @@ if fruta in frutas:
     print(f"A fruta {fruta} está na tupla.")
 else:
     print(f"A fruta {fruta} não está na tupla.")
+print()
 
 #---------------------------EXERCÍCIO 13
 #[TUPLE] Contar quantas vezes um número aparece
@@ -290,16 +299,13 @@ else:
 #Orientações: 
 #método: tuple.count()
 #tipos: int, tuple
-#Entrada: 4 números inteiros e um número inteiro
-#Saída: Quantas vezes o número aparece na tupla
-#Criando a tupla com os números inteiros
+
+
 numeros = tuple(int(input("Digite um número inteiro: ")) for _ in range(4)) 
-#Lendo o número a ser contado
 numero_contar = int(input("Digite um número para contar: "))
-#Contando quantas vezes o número aparece na tupla
 contador = numeros.count(numero_contar)
-#Exibindo o resultado
 print(f"O número {numero_contar} aparece {contador} vezes na tupla {numeros}.")
+print()
 
 #---------------------------EXERCÍCIO 14
 #[TUPLE] Exibir maior e menor valor
@@ -308,29 +314,55 @@ print(f"O número {numero_contar} aparece {contador} vezes na tupla {numeros}.")
 #funções: max(), min()
 #tipos: int, tuple
 #conceito: operações básicas de agregação
-#Leitura dos números inteiros
+
 numeros = tuple(int(input("Digite um número inteiro: ")) for _ in range(4))
-#Exibir o maior e o menor valor
 maior = max(numeros)
 menor = min(numeros)
 print(f"O maior número é: {maior}")
 print(f"O menor número é: {menor}")
-
+print()
 
 #--------------------------EXERCÍCIO 15
 #[TUPLE] Dias da semana com tuplas
 #1 - Crie uma tupla com os dias da semana. dias = ()
 #2 - Utilize print() para exibis os dias da semana na tela. print(dias)
 #3 - Utilize o índice para exibir o primeiro dia da semana. Dica: dias [0]
-#4 - Utilize o índice para exibiri o último dia da lista.
-Dica? dias [-1]
+#4 - Utilize o índice para exibiri o último dia da lista.Dica? dias [-1]
 #5 - Verifique o tamanho da tupla utilizando len(dias).
+
 dias = ("Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado", "Domingo")
-#2
 print(dias)     
-#3
 print(dias[0])
-#4
 print(dias[-1])
-#5
 print(len(dias))    
+print()
+
+#--------------------------EXERCÍCIO 16
+#[TUPLE - desafio] Tupla de notas com média (sem alterar a tupla)
+#Tarefa: Leia três notas (float) earmazene em uma tupla. 
+#Exiba a tupla e a média das notas.
+# #Use: float(), sum(), len(), print()
+#Sem alterar tupla.
+
+notas = (float(input("Digite a primeira nota: ")),
+         float(input("Digite a segunda nota: ")),   
+            float(input("Digite a terceira nota: ")))
+media = sum(notas) / len(notas)
+print("Notas:", notas)
+print("Média:", media)
+print()
+
+
+#--------------------------EXERCÍCIO 17
+#[TUPLE - desafio] Organizar valores sem mexer na tupla original
+#Tarefa: Leia quatro números em uma tupla e exiba: 
+#a tupla original
+#uma lista ordenada apenas para visualização
+#o tipo da variável ordenada
+#Objetivo: mostrar diferença entre tupla e lista sem precisar modificar nada.Use: sorted(), print(), type()
+
+numeros = (4, 2, 3, 1)
+print("Tupla original:", numeros)
+numeros_ordenados = sorted(numeros)
+print("Lista ordenada para visualização:", numeros_ordenados)
+print("Tipo da variável ordenada:", type(numeros_ordenados))
